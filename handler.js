@@ -433,7 +433,7 @@ module.exports = {
           if (!('nsfw' in chat)) chat.nsfw = true
         } else global.db.data.chats[m.chat] = {
           isBanned: false,
-          welcome: false,
+          welcome: true,
           detect: false,
           sWelcome: '',
           sBye: '',
@@ -444,7 +444,7 @@ module.exports = {
           rpg: true,
           nsfw: true,
           antiBadword: true,
-          antiLink: false,
+          antiLink: true,
           viewonce: true,
           simi: false,
         }
@@ -464,13 +464,13 @@ module.exports = {
           if (!isNumber(settings.status)) settings.status = 0
         } else global.db.data.settings[this.user.jid] = {
           anon: true,
-          anticall: true,
+          anticall: false,
           antispam: true,
-          antitroli: false,
+          antitroli: true,
           backup: true,
           backupDB: 0,
           groupOnly: false,
-          jadibot: false,
+          jadibot: true,
           nsfw: true,
           onsfw: true,
           status: 0,
